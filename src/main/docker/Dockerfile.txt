@@ -1,7 +1,7 @@
 FROM java:8
 
 VOLUME /tmp
-ADD dockerTest.jar /opt/dockerTest/
+ADD docker-test.jar /opt/docker-test/
 EXPOSE 8080
-WORKDIR /opt/dockerTest/
-CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-Xms512m", "-Xmx1g", "-jar", "dockerTest.jar"]
+WORKDIR /opt/docker-test/
+CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-Xms512m", "-Xmx1g", "-jar", "docker-test.jar"]
